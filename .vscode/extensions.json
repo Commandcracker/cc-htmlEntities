@@ -1,0 +1,21 @@
+{
+    "recommendations": [
+        // Lua
+        "sumneko.lua",
+        // Formatter
+        "JohnnyMorganz.stylua",
+        // Linter
+        "Kampfkarren.selene-vscode",
+
+        // ComputerCraft
+        //"jackmacwindows.vscode-computercraft",
+        //"jackmacwindows.craftos-pc"
+
+        // Makefile
+        "carlos-algms.make-task-provider",
+
+        // Markdown
+        "DavidAnson.vscode-markdownlint"
+        //"bierner.github-markdown-preview"
+    ]
+}

@@ -1,0 +1,37 @@
+---
+name: busted
+base: luassert
+globals:
+    # same function, different name
+    describe: { args: [{ type: string }, { type: function }] }
+    context: { args: [{ type: string }, { type: function }] }
+
+    # same function, different name
+    it: { args: [{ type: string }, { type: function }] }
+    spec: { args: [{ type: string }, { type: function }] }
+    test: { args: [{ type: string }, { type: function }] }
+
+    pending: { args: [{ type: string }, { type: function }] }
+
+    expose: { args: [{ type: string }, { type: function }] }
+    insulate: { args: [{ type: string }, { type: function }] }
+
+    randomize: { args: [] }
+
+    before_each: { args: [{ type: function }] }
+    after_each: { args: [{ type: function }] }
+
+    setup: { args: [{ type: function }] }
+    strict_setup: { args: [{ type: function }] }
+    lazy_setup: { args: [{ type: function }] }
+
+    teardown: { args: [{ type: function }] }
+    strict_teardown: { args: [{ type: function }] }
+    lazy_teardown: { args: [{ type: function }] }
+
+    # Undocumented feature with unknown purpose.
+    # hidden and missing in some environments
+    #file: { args: [{ type: string }] }
+
+    finally: { args: [{ type: function }] }
+# https://lunarmodules.github.io/busted/#async-tests

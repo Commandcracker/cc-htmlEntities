@@ -1,0 +1,260 @@
+---
+# FIXME: aliases https://github.com/Kampfkarren/selene/issues/527
+
+name: luassert
+globals:
+    assert:
+        property: read-only
+
+    assert.True: { args: [{ type: any }] }
+    assert.is_true: { args: [{ type: any }] }
+    assert.is_not_true: { args: [{ type: any }] }
+
+    assert.False: { args: [{ type: any }] }
+    assert.is_false: { args: [{ type: any }] }
+    assert.is_not_false: { args: [{ type: any }] }
+
+    assert.Boolean: { args: [{ type: any }] }
+    assert.boolean: { args: [{ type: any }] }
+    assert.is_boolean: { args: [{ type: any }] }
+    assert.is_not_boolean: { args: [{ type: any }] }
+
+    assert.Number: { args: [{ type: any }] }
+    assert.number: { args: [{ type: any }] }
+    assert.is_number: { args: [{ type: any }] }
+    assert.is_not_number: { args: [{ type: any }] }
+
+    assert.String: { args: [{ type: any }] }
+    assert.string: { args: [{ type: any }] }
+    assert.is_string: { args: [{ type: any }] }
+    assert.is_not_string: { args: [{ type: any }] }
+
+    assert.Table: { args: [{ type: any }] }
+    assert.table: { args: [{ type: any }] }
+    assert.is_table: { args: [{ type: any }] }
+    assert.is_not_table: { args: [{ type: any }] }
+
+    assert.Nil: { args: [{ type: any }] }
+    assert.is_nil: { args: [{ type: any }] }
+    assert.is_not_nil: { args: [{ type: any }] }
+
+    assert.Userdata: { args: [{ type: any }] }
+    assert.userdata: { args: [{ type: any }] }
+    assert.is_userdata: { args: [{ type: any }] }
+    assert.is_not_userdata: { args: [{ type: any }] }
+
+    assert.Function: { args: [{ type: any }] }
+    assert.is_function: { args: [{ type: any }] }
+    assert.is_not_function: { args: [{ type: any }] }
+
+    assert.Thread: { args: [{ type: any }] }
+    assert.thread: { args: [{ type: any }] }
+    assert.is_thread: { args: [{ type: any }] }
+    assert.is_not_thread: { args: [{ type: any }] }
+
+    assert.truthy: { args: [{ type: any }] }
+    assert.Truthy: { args: [{ type: any }] }
+    assert.is_truthy: { args: [{ type: any }] }
+    assert.is_not_truthy: { args: [{ type: any }] }
+
+    assert.falsy: { args: [{ type: any }] }
+    assert.Falsy: { args: [{ type: any }] }
+    assert.is_falsy: { args: [{ type: any }] }
+    assert.is_not_falsy: { args: [{ type: any }] }
+
+    assert.error:
+        args:
+            - type: function
+            - type: string
+              required: false
+    assert.Error:
+        args:
+            - type: function
+            - type: string
+              required: false
+    assert.has_error:
+        args:
+            - type: function
+            - type: string
+              required: false
+    assert.no_error:
+        args:
+            - type: function
+            - type: string
+              required: false
+    assert.no_has_error:
+        args:
+            - type: function
+            - type: string
+              required: false
+    assert.has_no_error:
+        args:
+            - type: function
+            - type: string
+              required: false
+
+    assert.matches:
+        args:
+            - type: string
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.is_matches:
+        args:
+            - type: string
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.is_not_matches:
+        args:
+            - type: string
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.match:
+        args:
+            - type: string
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.is_match:
+        args:
+            - type: string
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.is_not_match:
+        args:
+            - type: string
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+
+    assert.near:
+        args: [{ type: number }, { type: number }, { type: number }]
+    assert.Near:
+        args: [{ type: number }, { type: number }, { type: number }]
+    assert.is_near:
+        args: [{ type: number }, { type: number }, { type: number }]
+    assert.is_not_near:
+        args: [{ type: number }, { type: number }, { type: number }]
+
+    assert.equal: { args: [{ type: any }, { type: ... }] }
+    assert.Equal: { args: [{ type: any }, { type: ... }] }
+    assert.are_equal: { args: [{ type: any }, { type: ... }] }
+    assert.are_not_equal: { args: [{ type: any }, { type: ... }] }
+
+    assert.same: { args: [{ type: any }, { type: ... }] }
+    assert.Same: { args: [{ type: any }, { type: ... }] }
+    assert.are_same: { args: [{ type: any }, { type: ... }] }
+    assert.are_not_same: { args: [{ type: any }, { type: ... }] }
+
+    assert.returned_arguments: { args: [{ type: number }, { type: function }] }
+    assert.not_returned_arguments:
+        args: [{ type: number }, { type: function }]
+
+    assert.error_matches:
+        args:
+            - type: function
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.no_error_matches:
+        args:
+            - type: function
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.error_match:
+        args:
+            - type: function
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.no_error_match:
+        args:
+            - type: function
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.matches_error:
+        args:
+            - type: function
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.no_matches_error:
+        args:
+            - type: function
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.match_error:
+        args:
+            - type: function
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+    assert.no_match_error:
+        args:
+            - type: function
+            - type: string
+            - type: number
+              required: false
+            - type: bool
+              required: false
+
+    assert.all_near:
+        args:
+            - type: table # FIXME: number[] https://github.com/Kampfkarren/selene/issues/528
+            - type: table # FIXME: number[] https://github.com/Kampfkarren/selene/issues/528
+            - type: number
+    assert.are_all_near:
+        args:
+            - type: table # FIXME: number[] https://github.com/Kampfkarren/selene/issues/528
+            - type: table # FIXME: number[] https://github.com/Kampfkarren/selene/issues/528
+            - type: number
+    assert.are_not_all_near:
+        args:
+            - type: table # FIXME: number[] https://github.com/Kampfkarren/selene/issues/528
+            - type: table # FIXME: number[] https://github.com/Kampfkarren/selene/issues/528
+            - type: number
+
+    assert.unique:
+        args:
+            - type: table # FIXME: any[] https://github.com/Kampfkarren/selene/issues/528
+    assert.is_unique:
+        args:
+            - type: table # FIXME: any[] https://github.com/Kampfkarren/selene/issues/528
+    assert.is_not_unique:
+        args:
+            - type: table # FIXME: any[] https://github.com/Kampfkarren/selene/issues/528
+
+# https://github.com/LuaCATS/luassert/blob/d3528bb679302cbfdedefabb37064515ab95f7b9/library/luassert.lua#L269
+# https://github.com/Kampfkarren/selene/blob/fb04c9a2993932a49e5ff3bda6371ee5040aba02/selene-lib/default_std/lua51.yml#L29-L34

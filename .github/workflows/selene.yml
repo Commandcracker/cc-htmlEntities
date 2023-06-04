@@ -1,0 +1,23 @@
+name: Selene Lint
+
+on:
+    workflow_dispatch:
+    push:
+        paths: ["**.lua"]
+    pull_request:
+        paths: ["**.lua"]
+
+jobs:
+    selene:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v3
+
+            - name: Selene Lint ✅
+              uses: NTBBloodbath/selene-action@v1.0.0
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  args: .
+                  version: 0.25.0

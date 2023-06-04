@@ -1,0 +1,20 @@
+name: StyLua Lint
+
+on:
+    workflow_dispatch:
+    push:
+        paths: ["**.lua"]
+    pull_request:
+        paths: ["**.lua"]
+
+jobs:
+    stylua:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: StyLua Lint ✅
+              uses: JohnnyMorganz/stylua-action@v3
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  version: v0.17.1
+                  args: --check .
